@@ -16,11 +16,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work\\AoC22\\AoC22\\Day1\\Day1.csproj",
+      "projectUniqueName": "C:\\Work\\AdventOfCode22\\AoC22\\Day1\\Day1.csproj",
       "projectName": "Day1",
-      "projectPath": "C:\\Work\\AoC22\\AoC22\\Day1\\Day1.csproj",
+      "projectPath": "C:\\Work\\AdventOfCode22\\AoC22\\Day1\\Day1.csproj",
       "packagesPath": "C:\\Users\\ellisd\\.nuget\\packages\\",
-      "outputPath": "C:\\Work\\AoC22\\AoC22\\Day1\\obj\\",
+      "outputPath": "C:\\Work\\AdventOfCode22\\AoC22\\Day1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
