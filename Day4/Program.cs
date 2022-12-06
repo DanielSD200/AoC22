@@ -1,34 +1,34 @@
 ﻿
-//List<string> input = File.ReadAllLines(@"C:\Work\AdventOfCode22\AoC22\Day4\input.txt").ToList();
+List<string> input = File.ReadAllLines(@"C:\Work\AdventOfCode22\AoC22\Day4\input.txt").ToList();
 
-//var cleaningAreas =
-//    from x in input
-//    select new
-//    {
-//        cleaningAreaOne = x.Split(',')[0].Split('-')?.Select(Int32.Parse)?.ToList(),
-//        cleaningAreaTwo = x.Split(',')[1].Split('-')?.Select(Int32.Parse)?.ToList(),
-//    };
+var cleaningAreas =
+   from x in input
+   select new
+   {
+       cleaningAreaOne = x.Split(',')[0].Split('-')?.Select(Int32.Parse)?.ToList(),
+       cleaningAreaTwo = x.Split(',')[1].Split('-')?.Select(Int32.Parse)?.ToList(),
+   };
 
-//var fullOverlaps =
-//    (from x in cleaningAreas
-//     where x.cleaningAreaOne[0] >= x.cleaningAreaTwo[0] && x.cleaningAreaOne[1] <= x.cleaningAreaTwo[1] ||
-//     x.cleaningAreaTwo[0] >= x.cleaningAreaOne[0] && x.cleaningAreaTwo[1] <= x.cleaningAreaOne[1]
-//     select x).ToList();
+var fullOverlaps =
+   (from x in cleaningAreas
+    where x.cleaningAreaOne[0] >= x.cleaningAreaTwo[0] && x.cleaningAreaOne[1] <= x.cleaningAreaTwo[1] ||
+    x.cleaningAreaTwo[0] >= x.cleaningAreaOne[0] && x.cleaningAreaTwo[1] <= x.cleaningAreaOne[1]
+    select x).ToList();
 
-//Console.WriteLine($"Part 1: {fullOverlaps.Count()}");
+Console.WriteLine($"Part 1: {fullOverlaps.Count()}");
 
-//var partialOverlaps =
-//    (from x in cleaningAreas
-//     where (x.cleaningAreaOne[0] >= x.cleaningAreaTwo[0] && x.cleaningAreaOne[0] <= x.cleaningAreaTwo[1]) ||
-//     (x.cleaningAreaTwo[0] >= x.cleaningAreaOne[0] && x.cleaningAreaTwo[1] <= x.cleaningAreaOne[1])
+var partialOverlaps =
+   (from x in cleaningAreas
+    where (x.cleaningAreaOne[0] >= x.cleaningAreaTwo[0] && x.cleaningAreaOne[0] <= x.cleaningAreaTwo[1]) ||
+    (x.cleaningAreaTwo[0] >= x.cleaningAreaOne[0] && x.cleaningAreaTwo[1] <= x.cleaningAreaOne[1])
     
-//     select x).ToList();
+    select x).ToList();
 
-//partialOverlaps.ForEach(x =>
-//    Console.WriteLine($"{x.cleaningAreaOne[0]}-{x.cleaningAreaOne[1]} , {x.cleaningAreaTwo[0]}-{x.cleaningAreaTwo[1]}")
-//);
+partialOverlaps.ForEach(x =>
+   Console.WriteLine($"{x.cleaningAreaOne[0]}-{x.cleaningAreaOne[1]} , {x.cleaningAreaTwo[0]}-{x.cleaningAreaTwo[1]}")
+);
 
-//Console.WriteLine($"Part 2: {partialOverlaps.Count()}");
+Console.WriteLine($"Part 2: {partialOverlaps.Count()}");
 
 string input2 = File.ReadAllText(@"C:\Work\AdventOfCode22\AoC22\Day4\input.txt");
 
